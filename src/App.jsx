@@ -10,57 +10,16 @@ import WatchlistPage from './pages/WatchlistPage/WatchlistPage';
 import DetailedCardPage from './pages/DetailedCardPage/DetailedCardPage';
 
 function App() {
-  const [favorites, setFavorites] = useState([]);
   const router = createBrowserRouter([
     {
       path: '/',
       element: <Layout />,
       children: [
-        {
-          index: true,
-          element: (
-            <LandingPage
-              favorites={favorites}
-              setFavorites={setFavorites}
-            />
-          ),
-        },
-        {
-          path: '/search/:searchedMovie',
-          element: (
-            <SearchPage
-              favorites={favorites}
-              setFavorites={setFavorites}
-            />
-          ),
-        },
-        {
-          path: '/search',
-          element: (
-            <SearchPage
-              favorites={favorites}
-              setFavorites={setFavorites}
-            />
-          ),
-        },
-        {
-          path: '/watchlist',
-          element: (
-            <WatchlistPage
-              favorites={favorites}
-              setFavorites={setFavorites}
-            />
-          ),
-        },
-        {
-          path: '/details/:id',
-          element: (
-            <DetailedCardPage
-              favorites={favorites}
-              setFavorites={setFavorites}
-            />
-          ),
-        },
+        { index: true, element: <LandingPage /> },
+        { path: '/search/:searchedMovie', element: <SearchPage /> },
+        { path: '/search', element: <SearchPage /> },
+        { path: '/watchlist', element: <WatchlistPage /> },
+        { path: '/details/:id', element: <DetailedCardPage /> },
       ],
     },
   ]);
