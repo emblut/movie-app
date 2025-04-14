@@ -14,7 +14,6 @@ function LandingPage({ favorites, setFavorites }) {
       .get('https://santosnr6.github.io/Data/favoritemovies.json')
       .then((response) => {
         setLandingMovies(response.data);
-        console.log(response.data);
       })
       .catch((error) => {
         console.error('An error occurred: ', error);

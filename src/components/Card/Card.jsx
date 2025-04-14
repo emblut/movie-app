@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import WatchlistButton from '../WatchlistButton/WatchlistButton';
 
 function Card({ movie, favorites, setFavorites }) {
-  console.log(movie);
   return (
     <Link to={`/details/${movie.imdbID}`}>
       <article className='card'>
