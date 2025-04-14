@@ -1,20 +1,20 @@
 import CardSection from '../../components/CardSection/CardSection';
+import { useState } from 'react';
 
 function WatchlistPage({ favorites, setFavorites }) {
+  const [watchlistMovies, setWatchlistMovies] = useState([]);
+
   const headingText = 'Watchlist';
-  const from = 'watchlist';
 
   return (
-    <div>
+    <>
       <CardSection
         headingText={headingText}
-        from={from}
-        landingMovies={null}
-        searchedMovie={null}
+        movies={watchlistMovies}
         favorites={favorites}
         setFavorites={setFavorites}
       />
-    </div>
+    </>
   );
 }
 
