@@ -1,5 +1,4 @@
 import './App.css';
-import { useState, useEffect } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
