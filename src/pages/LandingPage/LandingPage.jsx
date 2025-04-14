@@ -7,16 +7,14 @@ import CardSection from '../../components/CardSection/CardSection';
 function LandingPage({ favorites, setFavorites }) {
   const [landingMovies, setLandingMovies] = useState([]);
   const [randomMovies, setRandomMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
   const headingText = 'Recommendations';
-  const from = 'landing';
 
   useEffect(() => {
     axios
       .get('https://santosnr6.github.io/Data/favoritemovies.json')
       .then((response) => {
         setLandingMovies(response.data);
+        console.log(response.data);
       })
       .catch((error) => {
         console.error('An error occurred: ', error);
@@ -26,7 +24,6 @@ function LandingPage({ favorites, setFavorites }) {
   useEffect(() => {
     if (landingMovies.length > 0) {
       setRandomMovies(getRandomMovies(5, landingMovies));
-      setIsLoading(false);
     }
   }, [landingMovies]);
 
@@ -39,21 +36,16 @@ function LandingPage({ favorites, setFavorites }) {
     return randomMovies;
   }
 
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
   return (
-    <div>
+    <>
       <Carousel randomMovies={randomMovies} />
       <CardSection
         headingText={headingText}
-        from={from}
-        landingMovies={landingMovies}
-        searchedMovie={null}
+        movies={landingMovies}
         favorites={favorites}
         setFavorites={setFavorites}
       />
-    </div>
+    </>
   );
 }
 

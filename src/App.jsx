@@ -19,25 +19,37 @@ function App() {
         {
           index: true,
           element: (
-            <LandingPage favorites={favorites} setFavorites={setFavorites} />
+            <LandingPage
+              favorites={favorites}
+              setFavorites={setFavorites}
+            />
           ),
         },
         {
           path: '/search/:searchedMovie',
           element: (
-            <SearchPage favorites={favorites} setFavorites={setFavorites} />
+            <SearchPage
+              favorites={favorites}
+              setFavorites={setFavorites}
+            />
           ),
         },
         {
           path: '/search',
           element: (
-            <SearchPage favorites={favorites} setFavorites={setFavorites} />
+            <SearchPage
+              favorites={favorites}
+              setFavorites={setFavorites}
+            />
           ),
         },
         {
           path: '/watchlist',
           element: (
-            <WatchlistPage favorites={favorites} setFavorites={setFavorites} />
+            <WatchlistPage
+              favorites={favorites}
+              setFavorites={setFavorites}
+            />
           ),
         },
         {
