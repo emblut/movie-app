@@ -2,7 +2,7 @@ import './CardList.css';
 import Card from '../Card/Card';
 import NoMatch from '../NoMatch/NoMatch';
 
-function CardList({ movies, favorites, setFavorites }) {
+function CardList({ movies }) {
   if (movies.length <= 0 ) {
     return <NoMatch />;
   } else {
@@ -12,8 +12,6 @@ function CardList({ movies, favorites, setFavorites }) {
           return (
             <Card
               movie={movie}
-              favorites={favorites}
-              setFavorites={setFavorites}
             />
           );
         })}
