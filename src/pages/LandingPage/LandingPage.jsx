@@ -1,13 +1,24 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Carousel from "../../components/Carousel/Carousel";
-
 import CardSection from "../../components/CardSection/CardSection";
 
 function LandingPage({ favorites, setFavorites }) {
   const [landingMovies, setLandingMovies] = useState([]);
   const [randomMovies, setRandomMovies] = useState([]);
+<<<<<<<<< Temporary merge branch 1
   const headingText = "Recommendations";
+
+  useEffect(() => {
+    axios
+      .get("https://santosnr6.github.io/Data/favoritemovies.json")
+      .then((response) => {
+        setLandingMovies(response.data);
+      })
+      .catch((error) => {
+        console.error("An error occurred: ", error);
+      });
+=========
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -38,7 +49,6 @@ function LandingPage({ favorites, setFavorites }) {
     }
     return randomMovies;
   }
-  console.log(randomMovies);
 
   useEffect(() => {
     if (landingMovies.length > 0) {
@@ -49,6 +59,7 @@ function LandingPage({ favorites, setFavorites }) {
   if (isLoading) return <p>Laddar rekommendationer...</p>;
   if (error) return <p style={{ color: "red" }}>{error}</p>;
   if (landingMovies.length === 0) return <p>Inga filmer hittades.</p>;
+  console.log(randomMovies);
 
   return (
     <>
