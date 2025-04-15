@@ -17,6 +17,7 @@ function SearchBar() {
           setSearchString(event.target.value);
         }}
         type='text'
+        aria-label='Search for movie'
         placeholder='Search movie'
       />
       <Link to={`/search/${searchString}`}>
