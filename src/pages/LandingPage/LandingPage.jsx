@@ -7,18 +7,27 @@ import CardSection from "../../components/CardSection/CardSection";
 function LandingPage({ favorites, setFavorites }) {
   const [landingMovies, setLandingMovies] = useState([]);
   const [randomMovies, setRandomMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
   const headingText = "Recommendations";
 
   useEffect(() => {
-    axios
-      .get("https://santosnr6.github.io/Data/favoritemovies.json")
-      .then((response) => {
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        const response = await axios.get(
+          "https://santosnr6.github.io/Data/favoritemovies.json"
+        );
         setLandingMovies(response.data);
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error("An error occurred: ", error);
-      });
+      } catch (err) {
+        setError("Kunde inte ladda rekommendationerna.");
+        console.error("Fel vid hämtning:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
   function getRandomMovies(amount, landingMovies) {
