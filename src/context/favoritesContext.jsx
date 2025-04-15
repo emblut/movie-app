@@ -1,25 +1,46 @@
-import { useState, createContext, useContext } from 'react'
 
-const FavoritesContext = createContext()
+import React, { useState, createContext, useContext, useEffect } from 'react';
+
+const FavoritesContext = createContext();
 
 export const FavoritesProvider = ({ children }) => {
+  const [favorites, setFavorites] = useState([]);
 
-    //Listan med favoriterna, plus funktionen som påverkar listan (lägger till och tar bort filmer)
-    const [favorites, setFavorites] = useState([]);
-
-    const addFavorite = () => {
-        //lägg till favoritfilm funtion här
+ 
+  useEffect(() => {
+    const storedFavorites = localStorage.getItem('favorites');
+    if (storedFavorites) {
+      setFavorites(JSON.parse(storedFavorites));
     }
+  }, []);
 
-    const removeFavorite = () => {
-        //ta bort favoritfilm funtion här
-    }
+  
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
 
-    return (
-        <FavoritesContext.Provider value={{ favorites, addFavorite, removeFavorite }}>
-            {children}
-        </FavoritesContext.Provider>
-    )
+
+  const addFavorite = (movie) => {
+    setFavorites((prevFavorites) => {
+      if (!prevFavorites.some(fav => fav.imdbID === movie.imdbID)) {
+        return [...prevFavorites, movie];
+      }
+      return prevFavorites;
+    });
+  };
+
+  
+  const removeFavorite = (imdbID) => {
+    setFavorites((prevFavorites) =>
+      prevFavorites.filter(fav => fav.imdbID !== imdbID)
+    );
+  };
+
+  return (
+    <FavoritesContext.Provider value={{ favorites, addFavorite, removeFavorite }}>
+      {children}
+    </FavoritesContext.Provider>
+  );
 };
 
 export const useFavorites = () => useContext(FavoritesContext);
