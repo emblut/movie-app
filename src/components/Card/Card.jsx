@@ -2,15 +2,15 @@ import './Card.css';
 import { Link } from 'react-router-dom';
 import WatchlistButton from '../WatchlistButton/WatchlistButton';
 
-function Card({ movie, favorites, setFavorites }) {
+
+
+function Card({ movie }) {
   console.log(movie);
   return (
     <Link to={`/details/${movie.imdbID}`}>
       <article className='card'>
         <WatchlistButton
           movie={movie}
-          favorites={favorites}
-          setFavorites={setFavorites}
         />
         <img
           className='card__img'
