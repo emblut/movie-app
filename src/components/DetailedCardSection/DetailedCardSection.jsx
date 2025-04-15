@@ -4,7 +4,7 @@ import DetailedCard from '../DetailedCard/DetailedCard';
 function DetailedCardSection({ movieDetails, favorites, setFavorites }) {
   return (
     <section>
-      <Heading headingText={movieDetails.Title} />
+      {/* <Heading headingText={movieDetails.Title} /> */}
       <DetailedCard
         movieDetails={movieDetails}
         favorites={favorites}

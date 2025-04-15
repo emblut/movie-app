@@ -6,7 +6,9 @@ import CardList from '../CardList/CardList';
 
 function CardSection({ headingText, movies}) {
   useEffect(() => {
+
    
+
   }, [movies]);
 
   return (
