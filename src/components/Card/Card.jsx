@@ -2,6 +2,7 @@ import './Card.css';
 import { Link } from 'react-router-dom';
 import WatchlistButton from '../WatchlistButton/WatchlistButton';
 
+
 function Card({ movie }) {
   console.log(movie);
   return (
