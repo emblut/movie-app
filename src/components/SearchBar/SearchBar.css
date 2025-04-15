@@ -1,0 +1,37 @@
+.header__search-bar {
+  display: inline;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  width: 100%;
+  justify-self: center;
+  margin: 2rem 0 0 0;
+  max-width: 700px;
+}
+
+.header__input {
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem 0 0 2rem;
+  width: 90%;
+}
+
+.header__form-btn {
+  border-radius: 0 2rem 2rem 0;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.15s;
+  width: 10%;
+}
+
+.header__form-btn:hover {
+  opacity: 95%;
+}
+
+@media (min-width: 400px) {
+  .header__search-bar {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+  }
+}

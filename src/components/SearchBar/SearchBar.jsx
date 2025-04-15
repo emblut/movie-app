@@ -1,3 +1,4 @@
+import './SearchBar.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -11,15 +12,15 @@ function SearchBar() {
   return (
     <form onSubmit={handleSearch} className='header__search-bar'>
       <input
+        className='header__input'
         onChange={(event) => {
           setSearchString(event.target.value);
         }}
         type='text'
         placeholder='Search movie'
       />
-
       <Link to={`/search/${searchString}`}>
-        <button>Search</button>
+        <button className='header__form-btn'>Search</button>
       </Link>
     </form>
   );
