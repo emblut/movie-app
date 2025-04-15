@@ -1,0 +1,22 @@
+.header__watchlist {
+  text-decoration: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: yellow;
+  transition: 0.15s;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.header__watchlist:hover {
+  opacity: 80%;
+}
+
+@media (min-width: 400px) {
+  .header__watchlist {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+  }
+}

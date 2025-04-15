@@ -1,6 +1,17 @@
 .header {
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: rgb(27, 27, 27);
+  padding: 1.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 400px) {
+  .header {
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+    gap: 2rem;
+  }
 }
