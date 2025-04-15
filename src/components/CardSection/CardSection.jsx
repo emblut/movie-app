@@ -4,7 +4,7 @@ import axios from 'axios';
 import Heading from '../Heading/Heading';
 import CardList from '../CardList/CardList';
 
-function CardSection({ headingText, movies, favorites, setFavorites }) {
+function CardSection({ headingText, movies}) {
   useEffect(() => {
    
   }, [movies]);
@@ -14,8 +14,6 @@ function CardSection({ headingText, movies, favorites, setFavorites }) {
       <Heading headingText={headingText} />
       <CardList
         movies={movies}
-        favorites={favorites}
-        setFavorites={setFavorites}
       />
     </section>
   );
