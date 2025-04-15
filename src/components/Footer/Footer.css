@@ -1,15 +1,15 @@
 .footer {
     min-height: 150px;
-    background-color: black;
-    color: white;
+    background-color: #121212;
+    color: rgba(255, 255, 255, 0.808);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
-    padding: 3rem;
 }
 
 .footer__text {
     font-size: small;
+    display: grid;
+    flex-direction: column;
 }
