@@ -10,12 +10,8 @@ function LandingPage({ favorites, setFavorites }) {
   const headingText = "Recommendations";
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const headingText = "Recommendations";
 
   useEffect(() => {
-    axios
-      .get("https://santosnr6.github.io/Data/favoritemovies.json")
-      .then((response) => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
@@ -23,11 +19,15 @@ function LandingPage({ favorites, setFavorites }) {
           "https://santosnr6.github.io/Data/favoritemovies.json"
         );
         setLandingMovies(response.data);
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error("An error occurred: ", error);
-      });
+      } catch (err) {
+        setError("Kunde inte ladda rekommendationerna.");
+        console.error("Fel vid hämtning:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
   function getRandomMovies(amount, landingMovies) {
@@ -38,16 +38,13 @@ function LandingPage({ favorites, setFavorites }) {
     }
     return randomMovies;
   }
-  console.log(randomMovies )
+  console.log(randomMovies);
 
   useEffect(() => {
     if (landingMovies.length > 0) {
       setRandomMovies(getRandomMovies(5, landingMovies));
     }
   }, [landingMovies]);
-
-  
-  
 
   if (isLoading) return <p>Laddar rekommendationer...</p>;
   if (error) return <p style={{ color: "red" }}>{error}</p>;
