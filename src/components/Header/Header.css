@@ -1,12 +1,12 @@
 .header {
-  background-color: rgb(27, 27, 27);
+  background-color: #121212;
   padding: 1.5rem;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 600px) {
   .header {
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto;
