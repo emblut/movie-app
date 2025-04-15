@@ -4,7 +4,6 @@ import { useFavorites } from '../../context/favoritesContext';
 
 function WatchlistButton({ movie }) {
   const { favorites, addFavorite, removeFavorite } = useFavorites();
-
   
   const isFavorite = movie ? favorites.some(fav => fav && fav.imdbID === movie.imdbID) : false;
 
