@@ -27,7 +27,7 @@ const Carousel = ({ randomMovies }) => {
           src={randomMovies[currentIndex].Trailer_link}
           allowFullScreen
         ></iframe>
-      </div>
+      
   
       <button className="carousel-control-prev" onClick={handlePrev}>
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -38,6 +38,7 @@ const Carousel = ({ randomMovies }) => {
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
+      </div>
     </div>
   );
   
