@@ -3,8 +3,8 @@ import './DetailedCard.css';
 import { useEffect, useState } from 'react';
 import missingPoster from '../../assets/missing-poster.jpg';
 
-function DetailedCard({ movieDetails, favorites, setFavorites }) {
-  console.log(movieDetails);
+function DetailedCard({ movieDetails }) {
+  console.log('detta är detailed card' + movieDetails);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ function DetailedCard({ movieDetails, favorites, setFavorites }) {
         </div>
         <div className='detailed-card__right'>
           <h1 className='detailed-card__title'>{movieDetails.Title}</h1>
-          <WatchlistButton />
+          <WatchlistButton movie={movieDetails}/>
         </div>
       </div>
       <div className='detailed-card__tags'>
@@ -74,7 +74,7 @@ function DetailedCard({ movieDetails, favorites, setFavorites }) {
       <div className='detailed-card__right'>
         <div className='detailed-card__right-top'>
           <h1 className='detailed-card__title'>{movieDetails.Title}</h1>
-          <WatchlistButton />
+          <WatchlistButton movie={movieDetails}/>
         </div>
 
         <div className='detailed-card__tags'>
