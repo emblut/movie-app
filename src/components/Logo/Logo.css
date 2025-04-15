@@ -1,0 +1,13 @@
+.header__logo {
+  width: 150px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+@media (min-width: 670px) {
+  .header__logo {
+    width: 200px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
