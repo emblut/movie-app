@@ -1,0 +1,11 @@
+.btt-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: yellow;
+  cursor: pointer;
+
+  margin-right: 2rem;
+}
