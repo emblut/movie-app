@@ -6,21 +6,9 @@ import CardSection from "../../components/CardSection/CardSection";
 function LandingPage({ favorites, setFavorites }) {
   const [landingMovies, setLandingMovies] = useState([]);
   const [randomMovies, setRandomMovies] = useState([]);
-<<<<<<<<< Temporary merge branch 1
-  const headingText = "Recommendations";
-
-  useEffect(() => {
-    axios
-      .get("https://santosnr6.github.io/Data/favoritemovies.json")
-      .then((response) => {
-        setLandingMovies(response.data);
-      })
-      .catch((error) => {
-        console.error("An error occurred: ", error);
-      });
-=========
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const headingText = "Recommendations";
 
   useEffect(() => {
     const fetchData = async () => {
