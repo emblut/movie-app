@@ -3,7 +3,7 @@ import DetailedCardSection from '../../components/DetailedCardSection/DetailedCa
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-function DetailedCardPage({favorites, setFavorites}) {
+function DetailedCardPage() {
   const [movieDetails, setMovieDetails] = useState('');
   const apiKey = 'aba4b16f';
   const { id } = useParams();
@@ -18,9 +18,6 @@ function DetailedCardPage({favorites, setFavorites}) {
     <>
       <DetailedCardSection
         movieDetails={movieDetails}
-        favorites={favorites}
-        setFavorites={setFavorites}
-
       />
     </>
   );
