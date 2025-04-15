@@ -9,7 +9,9 @@ export default function Footer() {
             <p style={{ margin: 0 }} >&copy; 2025 My Movie Database. All rights reserved.</p>
             <p style={{ margin: 0 }} >Developed by Embla Holgersson, Emilia Holmqvist, Emilia Myrup, Belinda Canovic & Carolina</p>
         </section>
-        <BackToTop />
+        <div className='footer__btt-wrapper'>
+            <BackToTop />
+      </div>
     </footer>
   )
 }
