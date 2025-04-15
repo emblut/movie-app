@@ -5,8 +5,8 @@ import axios from "axios";
 
 function DetailedCardPage({ favorites, setFavorites }) {
   const [movieDetails, setMovieDetails] = useState("");
-  const [isLoading, setIsLoading] = useState(true); // ← Estado para controlar la carga // state for loading
-  const [error, setError] = useState(null); // ← Estado para manejar errores // state for error handling
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
   const apiKey = "aba4b16f";
   const { id } = useParams();
 

@@ -6,7 +6,7 @@ function WatchlistButton({ movie }) {
   const { favorites, addFavorite, removeFavorite } = useFavorites();
 
   
-  const isFavorite = favorites.some(fav => fav.imdbID === movie.imdbID);
+  const isFavorite = movie ? favorites.some(fav => fav && fav.imdbID === movie.imdbID) : false;
 
   const handleFavoriteClick = (event) => {
     event.preventDefault(); 
