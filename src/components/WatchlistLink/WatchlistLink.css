@@ -13,7 +13,7 @@
   opacity: 80%;
 }
 
-@media (min-width: 670px) {
+@media (min-width: 720px) {
   .header__watchlist-link {
     grid-column: 3;
     grid-row: 1;
@@ -21,7 +21,6 @@
   }
 
   .header__watchlist {
-    width: 220px;
     text-align: end;
   }
 }

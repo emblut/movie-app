@@ -9,8 +9,9 @@ function DetailedCard({ movieDetails }) {
 
   useEffect(() => {
     const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 800);
+      setIsMobile(window.innerWidth < 680);
     };
+   
 
     checkIsMobile();
 
@@ -19,7 +20,7 @@ function DetailedCard({ movieDetails }) {
   }, []);
 
   return isMobile ? (
-    <article className='detailed-card' style={{padding:'20px'}}>
+    <article className='detailed-card'>
       <div className='detailed-card__top'>
         <div className='detailed-card__poster-wrapper'>
           <img
