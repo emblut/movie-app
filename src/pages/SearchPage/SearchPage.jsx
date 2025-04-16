@@ -28,7 +28,7 @@ function SearchPage({ favorites, setFavorites }) {
           setSearchMovies(response.data.Search);
         }
       } catch (err) {
-        setError("Något gick fel vid sökningen.");
+        setError("Something went wrong while searching.");
         console.error(`Sökfel: ${err.message}`);
       } finally {
         setIsLoading(false);
@@ -40,7 +40,12 @@ function SearchPage({ favorites, setFavorites }) {
     }
   }, [searchedMovie]);
 
-  if (isLoading) return <p>Söker efter filmer...</p>;
+  if (isLoading)
+    return (
+      <div className="no-match">
+        <p>Searching for movies...</p>
+      </div>
+    );
   if (error)
     return (
       <div className="no-match error">
@@ -50,7 +55,7 @@ function SearchPage({ favorites, setFavorites }) {
   if (searchMovies.length === 0)
     return (
       <div className="no-match">
-        <p>inget att visa</p>
+        <p>nothing to show</p>
       </div>
     );
 
