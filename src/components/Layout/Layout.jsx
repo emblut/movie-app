@@ -4,13 +4,13 @@ import Footer from '../Footer/Footer';
 
 function Layout() {
   return (
-    <>
+    <section className='layout__wrapper'>
       <Header />
       <main>
         <Outlet />
       </main>
       <Footer />
-    </>
+    </section>
   );
 }
 
