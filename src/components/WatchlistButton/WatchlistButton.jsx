@@ -2,7 +2,7 @@ import React from 'react';
 import { useFavorites } from '../../context/favoritesContext';
 import './WatchlistButton.css'; 
 
-function WatchlistButton({ movie }) {
+function WatchlistButton({ movie, className = '' }) {
   const { favorites, addFavorite, removeFavorite } = useFavorites();
 
   
@@ -19,7 +19,7 @@ function WatchlistButton({ movie }) {
   };
 
   return (
-    <button className="favorite-button" onClick={handleFavoriteClick} aria-label='Favorite button'>
+    <button className={`favorite-button ${className}`} onClick={handleFavoriteClick} aria-label='Favorite button'>
       {isFavorite ? <i className="fa-solid fa-star"></i> : <i className="fa-regular fa-star"></i>}
     </button>
   );
