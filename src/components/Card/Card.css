@@ -10,7 +10,9 @@
     width: 300px;
     height: 520px;
     padding: 1rem;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    background-color: rgb(40, 40, 40);
+    color: white;
     border-radius: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -36,7 +38,7 @@
     font-size: 1rem;
     margin-top: 0.75rem;
     font-weight: 600;
-    color: #333;
+    /* color: #333; */
     font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -49,7 +51,7 @@
 
 }
 
-.card__read-more {
+/* .card__read-more {
     background: none;
     border: none;
     color: rgb(23, 23, 30);
@@ -69,7 +71,7 @@
 
 .card__read-more:focus {
     outline: none;
-}
+} */
 
 
 @media (max-width: 390px) {
