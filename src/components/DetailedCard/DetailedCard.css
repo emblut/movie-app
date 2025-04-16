@@ -81,7 +81,7 @@
 
 @media (min-width: 680px) {
   .detailed-card {
-    padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+    padding: 2rem;
     display: flex;
   }
 
@@ -106,12 +106,12 @@
     position: static !important;
     align-self: flex-start;
     flex-shrink: 0;
-    margin-top: 1rem;
+    margin-top: 0rem;
   }
 
   .detailed-card__title {
     display: flex;
-    margin: 1rem 0 1rem 0;
+    margin: 0 0 1rem 0;
     flex: 1;
     word-break: break-word; /* långa ord bryts */
   }
