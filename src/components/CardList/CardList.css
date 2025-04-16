@@ -1,12 +1,14 @@
 .card-list {
   display: flex;
-  
+  gap: 1rem;
+
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.card-list > a{
+.card-list>a {
   width: 300px;
   padding-bottom: 35px;
+
 }
