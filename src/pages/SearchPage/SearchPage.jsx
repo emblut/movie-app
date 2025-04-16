@@ -23,7 +23,7 @@ function SearchPage({ favorites, setFavorites }) {
         );
 
         if (response.data.Response === "False") {
-          setError("Ingen film hittades. Försök igen!");
+          setError("No results. Try again!");
         } else {
           setSearchMovies(response.data.Search);
         }

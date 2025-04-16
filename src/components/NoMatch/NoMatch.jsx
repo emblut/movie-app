@@ -4,7 +4,7 @@ import './NoMatch.css';
 function NoMatch() {
   return (
     <div className="no-match">
-      <p>Inget att visa</p>
+      <p>Nothing to show</p>
     </div>
   );
 }
