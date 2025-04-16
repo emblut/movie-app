@@ -11,7 +11,7 @@ export default function Footer() {
         </section>
         <div className='footer__btt-wrapper'>
             <BackToTop />
-      </div>
+        </div>
     </footer>
   )
 }
