@@ -14,10 +14,17 @@ function Card({ movie }) {
     setIsExpanded(!isExpanded);
   };
 
+  const formatTitle = (title) => {
+    if (!title) return "";
+    return title.charAt(0).toUpperCase() + title.slice(1).toLowerCase();
+  };
+
+  const formattedTitle = formatTitle(movie.Title);
+
   const displayedTitle =
-    movie.Title.length > maxLength && !isExpanded
-      ? `${movie.Title.substring(0, maxLength)}...`
-      : movie.Title;
+    formattedTitle.length > maxLength && !isExpanded
+      ? `${formattedTitle.substring(0, maxLength)}...`
+      : formattedTitle;
 
   const linkTo = `/details/${movie.imdbID}`;
 
