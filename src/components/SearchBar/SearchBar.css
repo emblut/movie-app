@@ -27,7 +27,7 @@
   opacity: 95%;
 }
 
-@media (min-width: 670px) {
+@media (min-width: 720px) {
   .header__search-bar {
     grid-column: 2;
     grid-row: 1;
