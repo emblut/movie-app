@@ -1,0 +1,31 @@
+.footer {
+    padding: 1.5rem;
+    width: 100%;
+    display: grid;
+    align-items: end;
+    grid-template-columns: 70% 30%;
+    min-height: 150px;
+    background-color: #121212;
+    color: rgba(255, 255, 255, 0.808);
+}
+
+.footer__text {
+    font-size: small;
+}
+
+.footer__btt-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+  
+  /* @media (min-width: 400px) {
+    .footer {
+      grid-template-columns: auto 1fr auto;
+      grid-template-rows: auto;
+      align-items: center;
+      justify-items: center;
+      gap: 2rem;a
+    }
+  } */
