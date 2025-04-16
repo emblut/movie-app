@@ -1,8 +1,10 @@
-import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import './App.css';
+
+import Layout from './components/Layout/Layout';
 import LandingPage from './pages/LandingPage/LandingPage';
 import SearchPage from './pages/SearchPage/SearchPage';
 import WatchlistPage from './pages/WatchlistPage/WatchlistPage';

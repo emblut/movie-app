@@ -1,6 +1,8 @@
-import WatchlistButton from '../WatchlistButton/WatchlistButton';
-import './DetailedCard.css';
 import { useEffect, useState } from 'react';
+
+import './DetailedCard.css';
+
+import WatchlistButton from '../WatchlistButton/WatchlistButton';
 import missingPoster from '../../assets/missing-poster.jpg';
 
 function DetailedCard({ movieDetails }) {
@@ -37,7 +39,10 @@ function DetailedCard({ movieDetails }) {
         <div className='detailed-card__right'>
           <div className='detailed-card__right-top'>
             <h1 className='detailed-card__title'>{movieDetails.Title}</h1>
-            <WatchlistButton movie={movieDetails} className='detailed-card__watchlist-btn' />
+            <WatchlistButton
+              movie={movieDetails}
+              className='detailed-card__watchlist-btn'
+            />
           </div>
         </div>
       </div>
