@@ -54,7 +54,7 @@
   margin: 3rem 0 1rem 0;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 670px) {
   .detailed-card {
     width: 100%;
     display: flex;

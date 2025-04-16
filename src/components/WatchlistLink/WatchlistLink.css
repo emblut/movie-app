@@ -1,4 +1,4 @@
-.header__watchlist {
+.header__watchlist-link {
   text-decoration: none;
   font-size: 1.5rem;
   cursor: pointer;
@@ -9,14 +9,19 @@
   justify-self: end;
 }
 
-.header__watchlist:hover {
+.header__watchlist-link:hover {
   opacity: 80%;
 }
 
 @media (min-width: 670px) {
-  .header__watchlist {
+  .header__watchlist-link {
     grid-column: 3;
     grid-row: 1;
     justify-self: end;
+  }
+
+  .header__watchlist {
+    width: 220px;
+    text-align: end;
   }
 }
