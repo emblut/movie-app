@@ -1,11 +1,20 @@
+.page-wrapper {
+  display: flex;
+  justify-content: center;  /* centrera horisontellt */
+  align-items: center;      /* centrera vertikalt */
+  min-height: 100vh;        /* fyll hela skärmhöjden */
+}
+
 .detailed-card {
-  background-color: black;
+  border-radius: 10px;
+  background-color: rgb(40, 40, 40);
   color: white;
-  /* 100% */
-  width: 400px;
+  width: 100%;
+  max-width: 1100px;
   padding: 1rem;
   font-weight: 600;
 }
+
 
 .detailed-card__top {
   margin: 2rem 0 0 0;
@@ -19,6 +28,7 @@
 
 .detailed-card__poster {
   width: 100%;
+  padding: 10px;
 }
 
 .detailed-card__title {

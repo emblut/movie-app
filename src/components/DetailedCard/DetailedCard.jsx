@@ -19,7 +19,7 @@ function DetailedCard({ movieDetails }) {
   }, []);
 
   return isMobile ? (
-    <article className='detailed-card'>
+    <article className='detailed-card' style={{padding:'20px'}}>
       <div className='detailed-card__top'>
         <div className='detailed-card__poster-wrapper'>
           <img
@@ -58,6 +58,7 @@ function DetailedCard({ movieDetails }) {
       </div>
     </article>
   ) : (
+    <div className='page-wrapper'>
     <article className='detailed-card'>
       <div className='detailed-card__poster-wrapper'>
         <img
@@ -94,6 +95,7 @@ function DetailedCard({ movieDetails }) {
         </div>
       </div>
     </article>
+    </div>
   );
 }
 
