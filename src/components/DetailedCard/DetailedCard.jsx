@@ -6,7 +6,6 @@ import WatchlistButton from '../WatchlistButton/WatchlistButton';
 import missingPoster from '../../assets/missing-poster.jpg';
 
 function DetailedCard({ movieDetails }) {
-  console.log('detta är detailed card' + movieDetails);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
