@@ -51,10 +51,10 @@
 
 }
 
-/* .card__read-more {
+.card__read-more {
     background: none;
     border: none;
-    color: rgb(23, 23, 30);
+    /* color: rgb(23, 23, 30); */
     cursor: pointer;
     font-size: 0.8rem;
     padding: 0;
@@ -71,7 +71,7 @@
 
 .card__read-more:focus {
     outline: none;
-} */
+}
 
 
 @media (max-width: 390px) {
