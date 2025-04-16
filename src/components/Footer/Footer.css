@@ -21,7 +21,7 @@
     height: 100%;
 }
   
-  @media (min-width: 400px) {
+  @media (min-width: 670px) {
   
     .footer__text {
       font-size: 11px;
