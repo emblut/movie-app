@@ -1,5 +1,5 @@
 body {
-  width: 100vw;
+  width: 100%;
   
   min-height: 100vh;
 
@@ -8,6 +8,6 @@ body {
 
 #root{
   background-color: #121212;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
 }
