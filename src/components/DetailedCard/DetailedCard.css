@@ -1,8 +1,8 @@
 .page-wrapper {
   display: flex;
-  justify-content: center;  /* centrera horisontellt */
-  align-items: center;      /* centrera vertikalt */
-  min-height: 100vh;        /* fyll hela skärmhöjden */
+  justify-content: center;  
+  align-items: flex-start;      
+  min-height: 100vh;        
 }
 
 .detailed-card {
@@ -80,7 +80,7 @@
   margin-top: 1rem;
 }
 
-@media (min-width: 670px) {
+@media (min-width: 680px) {
   .detailed-card {
     width: 100%;
     display: flex;
