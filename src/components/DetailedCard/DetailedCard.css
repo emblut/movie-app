@@ -15,10 +15,17 @@
   font-weight: 600;
 }
 
-
 .detailed-card__top {
   margin: 2rem 0 0 0;
   display: flex;
+}
+
+.detailed-card__right-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .detailed-card__poster-wrapper {
@@ -35,6 +42,8 @@
   color: yellow;
   font-size: 2rem;
   margin: 1rem 0 1rem 0;
+  flex: 1;
+  word-break: break-word; /* långa ord bryts */
 }
 
 .detailed-card__tags {
@@ -65,9 +74,10 @@
 }
 
 .detailed-card__watchlist-btn {
-  position: absolute;
-  top: 27%;
-  left: 70%;
+  position: static !important;
+  align-self: flex-start; /* beroende på layout */
+  flex-shrink: 0;
+  margin-top: 1rem;
 }
 
 @media (min-width: 680px) {
@@ -92,10 +102,22 @@
     justify-content: space-between;
     margin: 0 1rem 0.5rem 1rem;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .detailed-card__watchlist-btn {
+    position: static !important;
+    align-self: flex-start; 
+    flex-shrink: 0;
+    margin-top: 1rem;
   }
 
   .detailed-card__title {
-    display: inline;
+    display: flex;
+    margin: 1rem 0 1rem 0;
+    flex: 1;
+    word-break: break-word; /* långa ord bryts */
   }
 
   .detailed-card__tags {

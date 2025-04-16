@@ -35,8 +35,10 @@ function DetailedCard({ movieDetails }) {
           />
         </div>
         <div className='detailed-card__right'>
-          <h1 className='detailed-card__title'>{movieDetails.Title}</h1>
-          <WatchlistButton movie={movieDetails} />
+          <div className='detailed-card__right-top'>
+            <h1 className='detailed-card__title'>{movieDetails.Title}</h1>
+            <WatchlistButton movie={movieDetails} className='detailed-card__watchlist-btn' />
+          </div>
         </div>
       </div>
       <div className='detailed-card__tags'>
