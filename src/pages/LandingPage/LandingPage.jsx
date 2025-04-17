@@ -49,7 +49,6 @@ function LandingPage({ favorites, setFavorites }) {
   if (isLoading) return <p>Laddar rekommendationer...</p>;
   if (error) return <p style={{ color: 'red' }}>{error}</p>;
   if (landingMovies.length === 0) return <p>Inga filmer hittades.</p>;
-  console.log(randomMovies);
 
   return (
     <>
