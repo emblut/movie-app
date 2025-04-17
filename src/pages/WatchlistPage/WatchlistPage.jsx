@@ -1,17 +1,15 @@
-import CardSection from '../../components/CardSection/CardSection';
 import { useFavorites } from '../../context/favoritesContext';
 
+import CardSection from '../../components/CardSection/CardSection';
+
 function WatchlistPage() {
-  const { favorites }  = useFavorites()
+  const { favorites } = useFavorites();
 
   const headingText = 'Watchlist';
 
   return (
     <>
-      <CardSection
-        headingText={headingText}
-        movies={favorites}
-      />
+      <CardSection headingText={headingText} movies={favorites} />
     </>
   );
 }

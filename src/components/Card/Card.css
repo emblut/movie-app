@@ -1,8 +1,8 @@
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    padding: 0.6rem;
-    flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 0.6rem;
+  flex-direction: column;
 }
 
 .card {
@@ -21,17 +21,17 @@
 }
 
 .card:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .card__img {
-    display: flex;
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 0.75rem;
-    object-fit: cover;
-    margin-top: 0.8rem;
+  display: flex;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  margin-top: 0.8rem;
 }
 
 .card__title {
@@ -44,11 +44,10 @@
 }
 
 .card__link {
-    text-decoration: none;
-    color: inherit;
-    height: 100%;
-    width: 100%;
-
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  width: 100%;
 }
 
 .card__read-more {
@@ -64,30 +63,27 @@
 }
 
 .card__read-more:hover {
-    text-decoration: underline;
-
+  text-decoration: underline;
 }
-
 
 .card__read-more:focus {
-    outline: none;
+  outline: none;
 }
 
-
 @media (max-width: 390px) {
-    .card {
-        width: 100%;
-        padding: 0.75rem;
-        margin: 1.5rem;
-    }
+  .card {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 1.5rem;
+  }
 
-    .card__img {
-        border-radius: 0.5rem;
-    }
+  .card__img {
+    border-radius: 0.5rem;
+  }
 
-    .card__title {
-        margin-top: 0.30rem;
-        padding: 1rem;
-        font-size: 0.9rem;
-    }
+  .card__title {
+    margin-top: 0.3rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
 }

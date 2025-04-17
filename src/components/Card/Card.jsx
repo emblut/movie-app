@@ -1,11 +1,13 @@
-import "./Card.css";
-import { Link } from "react-router-dom";
-import WatchlistButton from "../WatchlistButton/WatchlistButton";
-import missingPoster from "../../assets/missing-poster.jpg";
-import { useState } from "react";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import './Card.css';
+
+import missingPoster from '../../assets/missing-poster.jpg';
+import WatchlistButton from '../WatchlistButton/WatchlistButton';
 
 function Card({ movie }) {
-  const posterSrc = movie.Poster !== "N/A" ? movie.Poster : missingPoster;
+  const posterSrc = movie.Poster !== 'N/A' ? movie.Poster : missingPoster;
   const [isExpanded, setIsExpanded] = useState(false);
   const maxLength = 35;
 
@@ -16,7 +18,7 @@ function Card({ movie }) {
   };
 
   const formatTitle = (title) => {
-    if (!title) return "";
+    if (!title) return '';
     return title.charAt(0).toUpperCase() + title.slice(1).toLowerCase();
   };
 
@@ -30,19 +32,19 @@ function Card({ movie }) {
   // const linkTo = `/details/${movie.imdbID}`;
 
   return (
-    <article className="card">
+    <article className='card'>
       <WatchlistButton movie={movie} />
-      <Link to={`/details/${movie.imdbID}`} className="card__link">
+      <Link to={`/details/${movie.imdbID}`} className='card__link'>
         <img
-          className="card__img"
+          className='card__img'
           src={posterSrc}
           alt={`${movie.Title} poster`}
         />
-        <p className="card__title">
+        <p className='card__title'>
           {displayedTitle}
           {formattedTitle.length > maxLength && (
-            <span className="card__read-more" onClick={toggleExpand}>
-              {isExpanded ? "Read Less" : "Read More"}
+            <span className='card__read-more' onClick={toggleExpand}>
+              {isExpanded ? 'Read Less' : 'Read More'}
             </span>
           )}
         </p>
