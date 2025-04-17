@@ -30,6 +30,7 @@
     border-radius: 0.75rem;
     object-fit: cover;
     margin-top: 0.8rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .card__title {

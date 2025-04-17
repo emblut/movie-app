@@ -19,12 +19,12 @@ function DetailedCardPage({ favorites, setFavorites }) {
         );
 
         if (response.data.Response === "False") {
-          setError(response.data.Error); // ← Mensaje de la API, como "Movie not found!"
+          setError(response.data.Error);
         } else {
           setMovieDetails(response.data);
         }
       } catch (err) {
-        setError("Något gick fel vid hämtning av filmdata.", err); // ← Mensaje personalizado
+        setError("Något gick fel vid hämtning av filmdata.", err);
       } finally {
         setIsLoading(false);
       }
@@ -33,7 +33,6 @@ function DetailedCardPage({ favorites, setFavorites }) {
     fetchMovieDetails();
   }, [id]);
 
-  // 💬 Renderizado condicional //
   if (isLoading) return <p>Laddar filmdata...</p>;
   if (error) return <p style={{ color: "red" }}>{error}</p>;
 
