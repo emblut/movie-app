@@ -1,4 +1,3 @@
-import './CardSection.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Heading from '../Heading/Heading';
