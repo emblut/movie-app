@@ -3,7 +3,7 @@ import DetailedCard from '../DetailedCard/DetailedCard';
 
 function DetailedCardSection({ movieDetails }) {
   return (
-    <section>
+    <section className='detailed__wrapper'>
       {/* <Heading headingText={movieDetails.Title} /> */}
       <DetailedCard
         movieDetails={movieDetails}

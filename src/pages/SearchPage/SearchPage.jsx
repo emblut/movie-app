@@ -23,12 +23,12 @@ function SearchPage({ favorites, setFavorites }) {
         );
 
         if (response.data.Response === "False") {
-          setError("Ingen film hittades. Försök igen!");
+          setError("No results. Try again!");
         } else {
           setSearchMovies(response.data.Search);
         }
       } catch (err) {
-        setError("Något gick fel vid sökningen.");
+        setError("Something went wrong while searching.");
         console.error(`Sökfel: ${err.message}`);
       } finally {
         setIsLoading(false);
@@ -40,9 +40,24 @@ function SearchPage({ favorites, setFavorites }) {
     }
   }, [searchedMovie]);
 
-  if (isLoading) return <p>Söker efter filmer...</p>;
-  if (error) return <p style={{ color: "red" }}>{error}</p>;
-  if (searchMovies.length === 0) return <p>Inga filmer att visa.</p>;
+  if (isLoading)
+    return (
+      <div className="no-match">
+        <p>Searching for movies...</p>
+      </div>
+    );
+  if (error)
+    return (
+      <div className="no-match error">
+        <p>{error}</p>
+      </div>
+    );
+  if (searchMovies.length === 0)
+    return (
+      <div className="no-match">
+        <p>nothing to show</p>
+      </div>
+    );
 
   return (
     <>

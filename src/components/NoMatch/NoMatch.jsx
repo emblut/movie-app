@@ -1,5 +1,12 @@
+import React from 'react';
+import './NoMatch.css';
+
 function NoMatch() {
-  return <p>No match</p>;
+  return (
+    <div className="no-match">
+      <p>Nothing to show</p>
+    </div>
+  );
 }
 
 export default NoMatch;

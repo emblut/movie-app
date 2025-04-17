@@ -1,4 +1,5 @@
 .footer {
+    margin-top: auto;
     padding: 1.5rem;
     width: 100%;
     display: grid;
@@ -20,12 +21,9 @@
     height: 100%;
 }
   
-  /* @media (min-width: 400px) {
-    .footer {
-      grid-template-columns: auto 1fr auto;
-      grid-template-rows: auto;
-      align-items: center;
-      justify-items: center;
-      gap: 2rem;a
+  @media (min-width: 670px) {
+  
+    .footer__text {
+      font-size: 11px;
     }
-  } */
+  } 

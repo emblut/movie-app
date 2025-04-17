@@ -10,27 +10,35 @@
 .header__input {
   flex: 1;
   min-width: 0;
-  padding: 1rem;
+  padding: 0.8rem;
   border: none;
   border-radius: 2rem 0 0 2rem;
 }
 
 .header__form-btn {
   border-radius: 0 2rem 2rem 0;
-  padding: 1rem;
+  padding: 0.8rem;
   border: none;
   cursor: pointer;
-  transition: 0.15s;
+  transition: opacity 0.15s linear;
 }
 
 .header__form-btn:hover {
   opacity: 95%;
 }
 
-@media (min-width: 670px) {
+@media (min-width: 720px) {
   .header__search-bar {
     grid-column: 2;
     grid-row: 1;
     margin: 0;
+  }
+
+  .header__input {
+    padding: 1rem;
+  }
+  
+  .header__form-btn {
+    padding: 1rem;
   }
 }

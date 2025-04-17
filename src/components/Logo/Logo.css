@@ -1,12 +1,12 @@
 .header__logo {
-  width: 150px;
+  width: 180px;
   grid-column: 1;
   grid-row: 1;
 }
 
 @media (min-width: 670px) {
   .header__logo {
-    width: 200px;
+    width: 220px;
     grid-column: 1;
     grid-row: 1;
   }

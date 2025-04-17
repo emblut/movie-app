@@ -9,7 +9,7 @@ function DetailedCard({ movieDetails }) {
 
   useEffect(() => {
     const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 800);
+      setIsMobile(window.innerWidth < 680);
     };
 
     checkIsMobile();
@@ -34,9 +34,12 @@ function DetailedCard({ movieDetails }) {
             }
           />
         </div>
-        <div className='detailed-card__right'>
+        <div className='detailed-card__title-button-container'>
           <h1 className='detailed-card__title'>{movieDetails.Title}</h1>
-          <WatchlistButton movie={movieDetails}/>
+          <WatchlistButton
+            movie={movieDetails}
+            className='detailed-card__watchlist-btn'
+          />
         </div>
       </div>
       <div className='detailed-card__tags'>
@@ -58,42 +61,51 @@ function DetailedCard({ movieDetails }) {
       </div>
     </article>
   ) : (
-    <article className='detailed-card'>
-      <div className='detailed-card__poster-wrapper'>
-        <img
-          className='detailed-card__poster'
-          src={
-            movieDetails.Poster !== 'N/A' ? movieDetails.Poster : missingPoster
-          }
-          alt={
-            movieDetails.Poster !== 'N/A' ? movieDetails.Title : missingPoster
-          }
-        />
-      </div>
-
-      <div className='detailed-card__right'>
-        <div className='detailed-card__right-top'>
-          <h1 className='detailed-card__title'>{movieDetails.Title}</h1>
-          <WatchlistButton movie={movieDetails}/>
+    <div className='page-wrapper'>
+      <article className='detailed-card'>
+        <div className='detailed-card__poster-wrapper'>
+          <img
+            className='detailed-card__poster'
+            src={
+              movieDetails.Poster !== 'N/A'
+                ? movieDetails.Poster
+                : missingPoster
+            }
+            alt={`${
+              movieDetails.Poster !== 'N/A' ? movieDetails.Title : missingPoster
+            } poster`}
+          />
         </div>
 
-        <div className='detailed-card__tags'>
-          <p className='detailed-card__tag'>Genre: {movieDetails.Genre}</p>
-          <p className='detailed-card__tag'>Runtime: {movieDetails.Runtime}</p>
-          <p className='detailed-card__tag'>Year: {movieDetails.Year}</p>
-        </div>
+        <div className='detailed-card__right'>
+          <div className='detailed-card__right-top'>
+            <h1 className='detailed-card__title'>{movieDetails.Title}</h1>
+            <WatchlistButton
+              movie={movieDetails}
+              className='detailed-card__watchlist-btn'
+            />
+          </div>
 
-        <p className='detailed-card__plot'>{movieDetails.Plot}</p>
+          <div className='detailed-card__tags'>
+            <p className='detailed-card__tag'>Genre: {movieDetails.Genre}</p>
+            <p className='detailed-card__tag'>
+              Runtime: {movieDetails.Runtime}
+            </p>
+            <p className='detailed-card__tag'>Year: {movieDetails.Year}</p>
+          </div>
 
-        <div className='detailed-card__credits'>
-          <p className='detailed-card__tag'>
-            Director: {movieDetails.Director}
-          </p>
-          <p className='detailed-card__tag'>Writers: {movieDetails.Writer}</p>
-          <p className='detailed-card__tag'>Actors: {movieDetails.Actors}</p>
+          <p className='detailed-card__plot'>{movieDetails.Plot}</p>
+
+          <div className='detailed-card__credits'>
+            <p className='detailed-card__tag'>
+              Director: {movieDetails.Director}
+            </p>
+            <p className='detailed-card__tag'>Writers: {movieDetails.Writer}</p>
+            <p className='detailed-card__tag'>Actors: {movieDetails.Actors}</p>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
   );
 }
 
