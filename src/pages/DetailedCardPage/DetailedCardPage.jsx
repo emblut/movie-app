@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import DetailedCardSection from "../../components/DetailedCardSection/DetailedCardSection";
 import { useParams } from "react-router-dom";
+
 import axios from "axios";
+
+import DetailedCardSection from "../../components/DetailedCardSection/DetailedCardSection";
 
 function DetailedCardPage({ favorites, setFavorites }) {
   const [movieDetails, setMovieDetails] = useState("");
@@ -19,12 +21,12 @@ function DetailedCardPage({ favorites, setFavorites }) {
         );
 
         if (response.data.Response === "False") {
-          setError(response.data.Error);
+          setError(response.data.Error); // ← Mensaje de la API, como "Movie not found!"
         } else {
           setMovieDetails(response.data);
         }
       } catch (err) {
-        setError("Något gick fel vid hämtning av filmdata.", err);
+        setError("Något gick fel vid hämtning av filmdata.", err); // ← Mensaje personalizado
       } finally {
         setIsLoading(false);
       }

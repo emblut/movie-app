@@ -1,5 +1,6 @@
-import './WatchlistLink.css';
 import { Link } from 'react-router-dom';
+
+import './WatchlistLink.css';
 
 function WatchlistLink() {
   return (

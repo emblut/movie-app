@@ -9,8 +9,7 @@
   margin: 0 auto;
 }
 
-.card-list>a {
+.card-list > a {
   width: 300px;
   padding-bottom: 35px;
-
 }

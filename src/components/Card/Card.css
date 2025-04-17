@@ -32,7 +32,6 @@
     border-radius: 0.75rem;
     object-fit: cover;
     margin-top: 0.8rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .card__title {
@@ -49,7 +48,6 @@
     color: inherit;
     height: 100%;
     width: 100%;
-
 }
 
 .card__read-more {
@@ -66,14 +64,11 @@
 
 .card__read-more:hover {
     text-decoration: underline;
-
 }
-
 
 .card__read-more:focus {
     outline: none;
 }
-
 
 @media (max-width: 390px) {
     .card {
@@ -87,7 +82,7 @@
     }
 
     .card__title {
-        margin-top: 0.30rem;
+        margin-top: 0.3rem;
         padding: 1rem;
         font-size: 0.9rem;
     }

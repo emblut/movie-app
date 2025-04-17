@@ -1,12 +1,14 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./Carousel.css";
-import React, { useState } from "react";
+import React, { useState } from 'react';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import './Carousel.css';
 
 const Carousel = ({ randomMovies }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   if (!randomMovies || randomMovies.length === 0) {
-    return <div className="text-center mt-5">Laddar trailers...</div>;
+    return <div className='text-center mt-5'>Laddar trailers...</div>;
   }
 
   const handleNext = () => {
@@ -20,28 +22,32 @@ const Carousel = ({ randomMovies }) => {
   };
 
   return (
-    <div className="custom-carousel position-relative text-center mb-5">
-      <div className="carousel-video-wrapper">
+    <div className='custom-carousel position-relative text-center mb-5'>
+      <div className='carousel-video-wrapper'>
         <iframe
-          className="carousel-video"
+          className='carousel-video'
           src={randomMovies[currentIndex].Trailer_link}
           allowFullScreen
         ></iframe>
-      
-  
-      <button className="carousel-control-prev" onClick={handlePrev}>
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-  
-      <button className="carousel-control-next" onClick={handleNext}>
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
+
+        <button className='carousel-control-prev' onClick={handlePrev}>
+          <span
+            className='carousel-control-prev-icon'
+            aria-hidden='true'
+          ></span>
+          <span className='visually-hidden'>Previous</span>
+        </button>
+
+        <button className='carousel-control-next' onClick={handleNext}>
+          <span
+            className='carousel-control-next-icon'
+            aria-hidden='true'
+          ></span>
+          <span className='visually-hidden'>Next</span>
+        </button>
       </div>
     </div>
   );
-  
 };
 
 export default Carousel;
