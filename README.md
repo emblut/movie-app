@@ -1,3 +1,6 @@
+[**Daily Scrum - Crazy Scientists**](https://docs.google.com/document/d/1f7lzMRF-9AMwfV1aFU9SgyttnmJ4TV-mwmzyzHF2H1c/edit?usp=sharing)
+
+
 # 🎬 Reactify your Movie App!
 
 Ni har redan byggt en filmdatabas med HTML, CSS och JavaScript. Nu är det dags att ta det till nästa nivå – med **React**! Målet är att upptäcka fördelarna med ett ramverk, såsom komponenter, återanvändning och en bättre, tydligare struktur.
