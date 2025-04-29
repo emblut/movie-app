@@ -1,28 +1,28 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-import './SearchBar.css';
+import "./SearchBar.css";
 
 function SearchBar() {
-  const [searchString, setSearchString] = useState('');
+  const [searchString, setSearchString] = useState("");
 
   function handleSearch(event) {
     event.preventDefault();
   }
 
   return (
-    <form onSubmit={handleSearch} className='header__search-bar'>
+    <form onSubmit={handleSearch} className="header__search-bar">
       <input
-        className='header__input'
+        className="header__input"
         onChange={(event) => {
           setSearchString(event.target.value);
         }}
-        type='text'
-        aria-label='Search for movie'
-        placeholder='Search movie'
+        type="text"
+        aria-label="Search for movie"
+        placeholder="Search movie"
       />
       <Link to={`/search/${searchString}`}>
-        <button className='header__form-btn'>Search</button>
+        <button className="header__form-btn">Search</button>
       </Link>
     </form>
   );
